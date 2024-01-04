@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package larsnorlander.notes.v1;
+
+import "google/protobuf/timestamp.proto";
+
+service NoteService {
+  rpc CreateNote(CreateNoteRequest) returns (CreateNoteResponse);
+}
+
+message Note {
+  string title = 1;
+  string body = 2;
+  // Output only
+  google.protobuf.Timestamp created_time = 3;
+}
+
+message CreateNoteRequest {
+  Note note = 1;
+}
+
+message CreateNoteResponse {
+  Note note = 2;
+}
+
+message ListNoteRequest {}
+
+message ListNoteResponse {
+  repeated Note note = 1;
+}

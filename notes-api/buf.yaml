@@ -1,0 +1,4 @@
+version: v1
+name: buf.build/larsnorlander/notes-api
+deps:
+  - buf.build/googleapis/googleapis
