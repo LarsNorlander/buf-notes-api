@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package larsnorlander.greeter.v1;
+
+service GreeterService {
+  rpc Greet(GreetRequest) returns (GreetResponse);
+}
+
+message GreetRequest {}
+
+message GreetResponse {
+  string greeting = 1;
+}

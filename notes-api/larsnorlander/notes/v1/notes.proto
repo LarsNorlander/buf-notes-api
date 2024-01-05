@@ -6,6 +6,7 @@ import "google/protobuf/timestamp.proto";
 
 service NoteService {
   rpc CreateNote(CreateNoteRequest) returns (CreateNoteResponse);
+  rpc ListNotes(ListNotesRequest) returns (ListNotesResponse);
 }
 
 message Note {
@@ -23,8 +24,8 @@ message CreateNoteResponse {
   Note note = 2;
 }
 
-message ListNoteRequest {}
+message ListNotesRequest {}
 
-message ListNoteResponse {
+message ListNotesResponse {
   repeated Note note = 1;
 }
